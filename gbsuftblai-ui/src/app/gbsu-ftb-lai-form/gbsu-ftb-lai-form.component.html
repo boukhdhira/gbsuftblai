@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Gbsu Ftb Lai</h2>
+  <form class="col-md-6" [formGroup]="formGroup">
+    <div class="form-group">
+      <label>Number to convert</label>
+      <input type="number" class="form-control" placeholder="inputNumber" formControlName="inputNumber" />
+      <span style="background-color: red"
+        *ngIf="formGroup.controls.inputNumber.invalid && (formGroup.controls.inputNumber.dirty || formGroup.controls.inputNumber.touched)">Invalid
+        number </span>
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary mt-2" (click)="submitNumber()">Convert</button>
+    </div>
+  </form>
+</div>
